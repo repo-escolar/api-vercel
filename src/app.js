@@ -5,10 +5,16 @@ import employeesRoutes from "./routes/employees.routes.js";
 import alumnosRoutes from "./routes/alumnos.routes.js";
 import indexRoutes from "./routes/index.routes.js";
 import materiasRoutes from "./routes/materias.routes.js";
+import cors from 'cors'; // Importar cors usando ES Modules
 
 const app = express();
 
-
+// Configuración de CORS
+const corsOptions = {
+  origin: 'http://localhost:3001', // Reemplazar con el origen de tu aplicación React
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions)); // Usar cors con las opciones configuradas
 
 // Middlewares
 app.use(morgan("dev"));
