@@ -11,7 +11,7 @@ const app = express();
 
 // Configuración de CORS
 const corsOptions = {
-  origin: 'http://localhost:3001', // Reemplazar con el origen de tu aplicación React
+  origin: 'http://localhost:3000', // Reemplazar con el origen de la aplicación
   optionsSuccessStatus: 200,
 };
 app.use(cors(corsOptions)); // Usar cors con las opciones configuradas
